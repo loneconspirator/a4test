@@ -8,7 +8,7 @@ from apps.documents.models import Chapter
 @pytest.mark.django_db
 def test_paragraph_save(paragraph_factory):
     paragraph = paragraph_factory(
-        text = '<script>alert("hello");</script>text')
+        text='<script>alert("hello");</script>text')
     assert '<script>' not in paragraph.text
 
 
